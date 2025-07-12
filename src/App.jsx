@@ -10,13 +10,15 @@ import Portfolio from "./pages/portfolio";
 function Layout() {
   return (
     <>
-      {/* <NavBar /> */}
+      {/* <Navbar /> */}
       <Outlet />
-      {/* <Footer_section /> */}
+      <Footersection />
     </>
   );
 }
 import { Outlet } from "react-router-dom";
+import Footersection from "./pages/footersection";
+import Navbar from "./pages/navbar";
 const router = createBrowserRouter([
   {
     path: "/",

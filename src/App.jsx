@@ -7,12 +7,17 @@ import Careers from "./pages/careers";
 import Product from "./pages/product";
 import Services from "./pages/services";
 import Portfolio from "./pages/portfolio";
+import Footer from "./pages/footer";
+import NavBar from "./pages/navbar";
+import Steps from "./pages/components/steps";
+import Faq from "./pages/components/faq";
+import Progress from "./pages/components/progress";
 function Layout() {
   return (
     <>
-      {/* <NavBar /> */}
+      <NavBar />
       <Outlet />
-      {/* <Footer_section /> */}
+      <Footer />
     </>
   );
 }
@@ -27,7 +32,7 @@ const router = createBrowserRouter([
         element: <Homepage />,
       },
       {
-        path: "/ContactUs",
+        path: "/Contactus",
         element: <Contactus />,
       },
       {
@@ -49,6 +54,18 @@ const router = createBrowserRouter([
       {
         path: "/Portfolio",
         element: <Portfolio />,
+      },
+      {
+        path: "/Step",
+        element: <Steps />,
+      },
+      {
+        path: "/Faq",
+        element: <Faq />,
+      },
+      {
+        path: "/Progress",
+        element: <Progress />,
       },
     ],
   },

@@ -15,15 +15,10 @@ import Progress from "./pages/components/progress";
 function Layout() {
   return (
     <>
-<<<<<<< HEAD
+
       <NavBar />
       <Outlet />
       <Footer />
-=======
-      {/* <Navbar /> */}
-      <Outlet />
-      <Footersection />
->>>>>>> 9cbabffecba8083272b5c6bcd9519e3f96ed218f
     </>
   );
 }

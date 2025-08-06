@@ -2,7 +2,7 @@ import { FaFacebookF, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { TbBrandLinkedin } from "react-icons/tb";
 
 
-import logo from "../assets/img/logo.png";
+// import logo from "../assets/img/logo.png";
 
 function Footersection() {
   return (
@@ -11,7 +11,7 @@ function Footersection() {
         <div>
           <div className="lg:flex  bg-[#F6F8FC] !p-15 ">
             <div className="">
-              <img src={logo} alt="logo" />
+              {/* <img src={logo} alt="logo" /> */}
               <p className="lg:flex lg:w-1/2 w-full text-neutral-600 !py-10">
                 Empowering the future of wealth through intelligent, high-return
                 lending with data-driven credit assessment and active tracking

@@ -78,6 +78,7 @@ function homePage() {
     <div className=" ">
       <section>
         <div>
+<<<<<<< HEAD
 
           <div className=' flex  lg:flex-row flex-col bg-[#F6F8FC] lg:!pt-30 !pt-20  '>
             <div className=' lg:!px-15 md:!px-10 !px-10 w-full '>
@@ -117,6 +118,15 @@ function homePage() {
                 <p className='text-[#104CBA] lg:text-[24px] md:text-[20px] text-[16px] font-manrope font-semibold lg:leading-10 md:leading-10 leading-10'>
                   Who we are
                 </p>
+=======
+          <div className='lg:grid lg:grid-cols-2 flex md:flex-col flex-col bg-[#F6F8FC] !pt-20 '>
+            <div className='!ml-10'>
+              <p className='text-[#262626] lg:text-[100px] text-[40px] font-semibold '>Creativity.</p>
+              <p className='text-[#262626] lg:text-[100px] text-[40px] font-semibold '>Collabration.</p>
+              <p className='text-[#0938D3] lg:text-[100px] text-[40px] font-semibold '>Development.</p>
+              <div>
+                <p className='!p-10 lg:text-[27px] md:text-[20px] text-[15px]  text-gray-700'>We help build and manage a team of world-class developers to bring your vision to life</p>
+>>>>>>> 9cbabffecba8083272b5c6bcd9519e3f96ed218f
               </div>
               <div className='!pb-10'>
                 <p className='lg:text-[40px] md:text-[30px] text-[20px] font-bold font-manrope lg:leading-18 md:leading-10 leading-8 text-[#0E1F51]'>
@@ -223,6 +233,7 @@ function homePage() {
         </div>
 
       </section>
+<<<<<<< HEAD
 
       {/* quality & efficience */}
 
@@ -295,6 +306,14 @@ function homePage() {
 
 
     </div>
+=======
+      {/* Contact Us */}
+    
+      {/* footer */}
+      
+    </div >
+     
+>>>>>>> 9cbabffecba8083272b5c6bcd9519e3f96ed218f
   )
 }
 

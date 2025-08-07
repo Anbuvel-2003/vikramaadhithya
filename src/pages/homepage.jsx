@@ -1,20 +1,13 @@
 import img1 from "../img/main_img.png";
 import img2 from "../img/Mask group.png";
-import img3 from "../img/faq.png";
 import img4 from "../img/Img_05-7.webp.png";
-import logo from "../img/main_logo.png";
-import logo1 from "../img/white_logo.png";
-import logo2 from "../img/va_favicon.png";
 import goal from "../img/our_goal.png";
 import vision from "../img/our_vision.png";
 import icon1 from "../img/icon1.png";
 import icon2 from "../img/icon2.png";
 import icon3 from "../img/icon3.png";
 import icon4 from "../img/icon4.png";
-import React from "react";
 import Step from "./components/steps";
-import { Divider, Steps } from "antd";
-import { number } from "yup";
 import Faq from "./components/faq";
 
 const items = [
@@ -72,7 +65,7 @@ function homePage() {
     <div className=" ">
       <section>
         <div>
-          <div className=" flex  lg:flex-row flex-col bg-[#F6F8FC] lg:!pt-30 !pt-20  ">
+          <div className=" flex  lg:flex-row md:flex-row flex-col bg-[#F6F8FC] lg:!pt-30 !pt-20  ">
             <div className=" lg:!px-15 md:!px-10 !px-10 w-full ">
               <p className="text-[#262626] lg:text-[100px] md:text-[60px] text-[40px] font-semibold lg:leading-32 md:leading-12 leading-10">
                 Creativity.
@@ -84,15 +77,17 @@ function homePage() {
                 Development.
               </p>
               <div>
-                <p className="flex lg:!py-10 !py-5 lg:text-[27px] md:text-[20px] text-[15px]  text-gray-700">
+                <p className="flex lg:!py-10 !py-5 lg:text-[27px] md:text-[20px] text-[16px]  text-gray-700">
                   We bring together top-tier developers to help you build,
                   scale, and succeed with digital innovation.
                 </p>
               </div>
               <div className="!pb-20">
                 <button
+                  type="button"
+                
                   className="border-2 border-none rounded-xl  text-white font-semibold bg-[#3D63EA] lg:h-15 
-                lg:w-50 h-10 w-35 lg:text-[19px]  md:text-[16px] text-[14px] "
+                lg:w-50 h-10 w-35 lg:text-[19px]  md:text-[16px] text-[14px] cursor-pointer "
                 >
                   Let's get started!
                 </button>
@@ -102,7 +97,7 @@ function homePage() {
               <img
                 src={img1}
                 alt="man using laptop"
-                className="lg:w-fit  md:w-1/2 w-1/2 "
+                className="hidden md:flex lg:w-fit  md:w-full "
               />
             </div>
           </div>
@@ -111,84 +106,60 @@ function homePage() {
 
       {/* who we are */}
 
-      {/* <section>
+       <section>
+
         <div className="bg-white  ">
-          <div className="flex lg:flex-row flex-col lg:!pt-30 !pt-10 lg:!px-15 md:!px-10 !px-10 ">
-            <div className="flex flex-col lg:w-1/2 md:w-full w-full justify-center ">
-              <div className=" ">
-                <p className="text-[#104CBA] lg:text-[24px] md:text-[20px] text-[16px] font-manrope font-semibold lg:leading-10 md:leading-10 leading-10">
+          <div className='flex lg:flex-row flex-col lg:!pt-30 !pt-10 lg:!px-15 md:!px-10 !px-10 '>
+            <div className='flex flex-col lg:w-1/2 md:w-full w-full justify-center '>
+              <div className=' '>
+                <p className='text-[#104CBA] lg:text-[24px] md:text-[20px] text-[16px] font-manrope font-semibold lg:leading-10 md:leading-10 leading-10'>
                   Who we are
                 </p>
-
-                <div className="lg:grid lg:grid-cols-2 flex md:flex-col flex-col bg-[#F6F8FC] !pt-20 ">
-                  <div className="!ml-10">
-                    <p className="text-[#262626] lg:text-[100px] text-[40px] font-semibold ">
-                      Creativity.
-                    </p>
-                    <p className="text-[#262626] lg:text-[100px] text-[40px] font-semibold ">
-                      Collabration.
-                    </p>
-                    <p className="text-[#0938D3] lg:text-[100px] text-[40px] font-semibold ">
-                      Development.
-                    </p>
-                    <div>
-                      <p className="!p-10 lg:text-[27px] md:text-[20px] text-[15px]  text-gray-700">
-                        We help build and manage a team of world-class
-                        developers to bring your vision to life
-                      </p>
-                    </div>
-                    <div className="!pb-10">
-                      <p className="lg:text-[40px] md:text-[30px] text-[20px] font-bold font-manrope lg:leading-18 md:leading-10 leading-8 text-[#0E1F51]">
-                        We Deliver Smarter Digital Solutions
-                      </p>
-                      <p className="lg:text-[18px] md:text-[16px] text-[14px]  text-[#696969] font-manrope lg:leading-10 md:leading-10 leading-7 text-justify">
-                        We’re a team of developers, designers, and strategists
-                        focused on creating tailored digital experiences. From
-                        web development to marketing tech, we help your business
-                        grow with purpose-driven solutions.
-                      </p>
-                    </div>
-                    <div>
-                      <div className="flex flex-row gap-20 lg:!pb-20 !pb-10">
-                        <div className="flex flex-col ">
-                          <p className="lg:text-[40px] md:text-[30px] text-[20px] font-manrope font-bold text-[#2C48A2] ">
-                            100%
-                          </p>
-                          <p className="lg:text-[20px] md:text-[16px] text-[14px] font-manrope font-semibold text-black ">
-                            Satisfaction
-                          </p>
-                        </div>
-                        <div className="flex flex-col ">
-                          <p className="lg:text-[40px] md:text-[30px] text-[20px] font-manrope font-bold text-[#2C48A2] ">
-                            100%
-                          </p>
-                          <p className="lg:text-[20px] md:text-[16px] text-[14px] font-manrope font-semibold text-black ">
-                            Trustable
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+              </div>
+              <div className='!pb-10'>
+                <p className='lg:text-[40px] md:text-[30px] text-[20px] font-bold font-manrope lg:leading-18 md:leading-10 leading-8 text-[#0E1F51]'>
+                  We Deliver Smarter Digital Solutions
+                </p>
+                <p className='lg:text-[20px] md:text-[18px] text-[16px]  text-[#696969] font-manrope lg:leading-10 md:leading-10 leading-7 text-justify'>
+                  We’re a team of developers, designers, and strategists focused on creating tailored digital experiences.
+                  From web development to marketing tech, we help your business grow with purpose-driven solutions.
+                </p>
+              </div>
+              <div >
+                <div className="flex flex-row gap-20 lg:!pb-20 !pb-10">
+                  <div className='flex flex-col '>
+                    <p className='lg:text-[40px] md:text-[30px] text-[20px] font-manrope font-bold text-[#2C48A2] '>100%</p>
+                    <p className='lg:text-[20px] md:text-[16px] text-[14px] font-manrope font-semibold text-black '>Satisfaction</p>
                   </div>
-
-                  <div className="lg:w-1/2 md:w-full w-full flex justify-center ">
-                    <img src={img4} alt="" />
+                  <div className='flex flex-col '>
+                    <p className='lg:text-[40px] md:text-[30px] text-[20px] font-manrope font-bold text-[#2C48A2] '>100%</p>
+                    <p className='lg:text-[20px] md:text-[16px] text-[14px] font-manrope font-semibold text-black '>Trustable</p>
                   </div>
                 </div>
               </div>
             </div>
+
+            <div className='lg:w-1/2 md:w-full w-full flex justify-center '>
+              <img src={img4} alt="" />
+            </div>
+
           </div>
         </div>
-      </section> */}
+
+
+
+      </section>
 
       {/* what we do */}
 
       <section>
+
         <div className="bg-[#FCFCFC]  ">
-          <div className="flex lg:flex-row flex-col !py-10 lg:!px-15 md:!px-10 lg:!mt-20 md:!mt-15 !mt-10 !px-10 ">
+          <div className="flex lg:flex-row md:flex-col flex-col !py-10 lg:!px-15 md:!px-10 lg:!mt-20 md:!mt-15 !mt-10 !px-10 ">
             <div className="lg:w-1/2 md:w-full w-full flex justify-center ">
               <img src={img2} alt="" />
             </div>
-            <div className="flex flex-col lg:w-1/2 md:w-full w-full justify-center ">
+            <div className="flex flex-col lg:w-1/2 md:w-full w-full justify-center lg:!px-15 md:!px-10  ">
               <div className=" ">
                 <p className="text-[#104CBA] lg:text-[24px] md:text-[20px] text-[16px] font-manrope font-semibold lg:leading-10 md:leading-10 leading-5 lg:pt-0 md:pt-0 !py-5">
                   What we do
@@ -198,7 +169,7 @@ function homePage() {
                 <p className="lg:text-[40px] md:text-[30px] text-[20px] font-bold font-manrope lg:leading-18 md:leading-10 leading-5 lg:pb-0 md:pb-0 !pb-5 text-[#0E1F51]">
                   We Develop Products That People Love to Use.
                 </p>
-                <p className="lg:text-[18px] md:text-[16px] text-[14px]  text-[#696969] font-manrope lg:leading-10 md:leading-10 leading-8 text-justify">
+                <p className="lg:text-[20px] md:text-[18px] text-[16px]  text-[#696969] font-manrope lg:leading-10 md:leading-10 leading-8 text-justify">
                   We craft intelligent, scalable software and digital platforms
                   that solve real-world problems. We specialize in building
                   digital products that blend functionality with delightful user
@@ -207,25 +178,25 @@ function homePage() {
                   usability, performance, and long-term growth.
                 </p>
               </div>
-              <div className="flex lg:flex-row md:flex-col flex-col gap-4 ">
-                <div className="flex flex-row  bg-[#F6FAFF] rounded-xl !p-3 gap-4 lg:w-1/2">
-                  <img src={vision} alt="vision" />
+              <div className="flex lg:flex-row md:flex-col flex-col gap-4  ">
+                <div className="flex flex-row  bg-[#F6FAFF] rounded-xl !p-3 gap-4 ">
+                  <img src={vision} alt="vision" className=" w-20 h-20 " />
                   <div className="flex flex-col  ">
-                    <p className="lg:text-[20px] md:text-[16px] text-[14px] font-raleway font-semibold font-raleway text-[#2C48A2] ">
+                    <p className="lg:text-[22px] md:text-[18px] text-[16px] font-raleway font-semibold font-raleway text-[#2C48A2] ">
                       Our Vision
                     </p>
-                    <p className="lg:text-[16px] md:text-[14px] text-[12px] font-manrope font-medium text-black ">
+                    <p className="lg:text-[18x] md:text-[16px] text-[14px] font-manrope font-medium text-[#0E1F51] ">
                       Deliver meaningful tech that empowers users.
                     </p>
                   </div>
                 </div>
                 <div className="flex flex-row  bg-[#F6FAFF] rounded-xl !p-3 gap-4 ">
-                  <img src={goal} alt="vision" className="w-fit" />
+                  <img src={goal} alt="goal" className="w-20 h-20 " />
                   <div className="flex flex-col  ">
-                    <p className="lg:text-[18px] md:text-[16px] text-[14px] font-raleway font-semibold font-raleway text-[#2C48A2] ">
+                    <p className="lg:text-[22px] md:text-[18px] text-[16px] font-raleway font-semibold font-raleway text-[#2C48A2] ">
                       Our Goal
                     </p>
-                    <p className="lg:text-[16px] md:text-[14px] text-[12px] font-manrope font-medium text-[#0E1F51] ">
+                    <p className="lg:text-[18px] md:text-[16px] text-[14px] font-manrope font-medium text-[#0E1F51] ">
                       Build digital experiences that intuitive, reliable
                     </p>
                   </div>
@@ -245,7 +216,7 @@ function homePage() {
               How we work
             </p>
           </div>
-          <div className="!pb-16">
+          <div className="lg:!pb-16 md:!pb-4 ">
             <p className="lg:text-[40px] md:text-[30px] text-[20px] font-bold font-manrope text-center lg:leading-18 md:leading-10 leading-8 text-[#0E1F51]">
               How Vikramaadhithya assist your business
             </p>
@@ -260,14 +231,14 @@ function homePage() {
 
       <section>
         <div className="bg-white  ">
-          <div className=" grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 lg:!mx-15 md:!mx-15 !mx-10 lg:gap-16 ">
+          <div className=" grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 lg:!mx-15 md:!mx-10 !mx-10 lg:gap-16 ">
             <div className="flex flex-col md:w-full w-full justify-center ">
               <div className=" ">
                 <p className="text-[#104CBA] lg:text-[24px] md:text-[20px] text-[16px] font-manrope font-semibold lg:leading-10 md:leading-10 leading-10">
                   Quality & Efficience
                 </p>
               </div>
-              <div className="!pb-20">
+              <div className="lg:!pb-20 md:!pb-20">
                 <p className="lg:text-[40px] md:text-[30px] text-[20px] font-bold font-manrope lg:leading-18 md:leading-10 leading-8 text-[#0E1F51]">
                   Full-stack software Engineering
                 </p>
@@ -297,14 +268,14 @@ function homePage() {
                     <div style={{ marginTop: extraMarginTop }}>
                       <div
                         key={index}
-                        className="!px-10 !py-5 rounded-[20px] shadow-2xl !mt-5 "
+                        className="!px-10 !py-5 rounded-[20px] shadow-2xl "
                       >
                         <img src={item?.image} alt="" className="" />
                         <div>
-                          <h2 className="text-[#2E325B] text-[22px] capitalize font-bold font-syne !mb-5 ">
+                          <h2 className="text-[#2E325B] lg:text-[24px] md:text-[22px] text-[20px] capitalize font-bold font-syne  ">
                             {item?.q1}
                           </h2>
-                          <h2 className="text-[#696969] lg:text-[16px] md:text-[14px] text-[14px] font-manrope !my-3 leading-8">
+                          <h2 className="text-[#696969] lg:text-[18px] md:text-[14px] text-[16px] font-manrope !my-2 leading-8">
                             {item?.q2}
                           </h2>
                         </div>

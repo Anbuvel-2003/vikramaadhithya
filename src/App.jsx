@@ -12,6 +12,8 @@ import NavBar from "./pages/navbar";
 import Steps from "./pages/components/steps";
 import Faq from "./pages/components/faq";
 import Progress from "./pages/components/progress";
+import Terms from "./pages/terms";
+import Privacy from "./pages/privacy";
 function Layout() {
   return (
     <>
@@ -70,6 +72,14 @@ const router = createBrowserRouter([
         path: "/Progress",
         element: <Progress />,
       },
+      {
+        path: "/terms",
+        element: <Terms />,
+      },
+      {
+        path: "/privacy",
+        element: <Privacy />,
+      }
     ],
   },
 ]);

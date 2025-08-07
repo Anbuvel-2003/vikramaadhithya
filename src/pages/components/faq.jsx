@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Img from "../../img/faq.png";
-import { FaCirclePlus, FaCircleMinus } from "react-icons/fa6";
+import { TbPlus, TbMinus } from "react-icons/tb";
 
 function Faq() {
     const Faq = [
@@ -40,7 +40,7 @@ function Faq() {
 
     return (
         <section className="w-full flex flex-col gap-10 lg:py-20 py-10">
-            <div className="flex flex-col md:flex-row lg:flex-row justify-between items-center my-10 !mx-10">
+            <div className="flex flex-col md:flex-row lg:flex-row justify-between items-center !my-10 !mx-10 " >
 
                 {/* Left Image */}
                 <div className="lg:w-1/2 md:w-1/2 w-full flex justify-center items-center !mb-20 md:mb-0">
@@ -48,7 +48,7 @@ function Faq() {
                 </div>
 
                 {/* Right Content */}
-                <div className="lg:w-1/2 md:w-1/2 w-full flex flex-col justify-center ">
+                <div className="lg:w-1/2 md:w-1/2 w-full flex flex-col justify-center lg:!pl-10 md:!pl-10  ">
                     <p className="text-[#104CBA] lg:text-[24px] md:text-[20px] text-[16px] font-manrope font-bold leading-5 md:leading-10 lg:leading-10">
                         Our Company
                     </p>
@@ -57,7 +57,7 @@ function Faq() {
                     </p>
 
                     {/* FAQ List */}
-                    <div className="lg:w-[80%] md:w-[80%] w-full flex flex-col !gap-5 !py-10">
+                    <div className="lg:w-[100%] md:w-[80%] w-full flex flex-col  !gap-5 !py-10">
                         {Faq?.map((item) => {
                             const isSelected = selected?.id === item?.id;
 
@@ -74,18 +74,18 @@ function Faq() {
                                         }}
                                     >
                                         <h2
-                                            className={`lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] font-semibold font-poppins capitalize ${isSelected ? "text-white" : "text-[#2C48A2]"
+                                            className={`lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] font-semibold w-full font-poppins capitalize ${isSelected ? "text-white" : "text-[#2C48A2]"
                                                 }`}
                                         >
                                             {item?.title}
                                         </h2>
                                         {isSelected ? (
-                                            <FaCircleMinus
-                                                size={20}
+                                            <TbMinus
+                                                size={25}
                                                 color={isSelected ? "#fff" : "#AF4BFF"}
                                             />
                                         ) : (
-                                            <FaCirclePlus size={20} color="#AF4BFF" />
+                                            <TbPlus size={25} color="#2C48A2" />
                                         )}
                                     </div>
 

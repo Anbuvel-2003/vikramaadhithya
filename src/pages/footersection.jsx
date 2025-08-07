@@ -182,21 +182,9 @@ function Footersection() {
               </div>
             </div>
           </div>
-          <div className=" bg-[#F6F8FC] lg:w-full !px-15 !pb-10">
-            <hr className="my-4 m-8 border-t border-neutral-400"></hr>
-            <div className="grid lg:grid-cols-2 grid-cols-1 lg:text-[18px] md:text-[14px] text-[12px] !pt-1 ">
-              <div>
-                <p>Copyright © 2025 VIKRAMAADHITHYA</p>
-              </div>
-              <div className="lg:flex md:flex  lg:place-content-end items-center gap-4 ">
-                <p>All Rights Reserved</p>
-                <span className="text-[#6e6e6e]">|</span>
-                <a href="/"> Terms and Conditions </a>
-                <span className="text-[#6e6e6e]">|</span>
-                <a href="/">Privacy Policy</a>
-              </div>
-            </div>
-          </div>
+        <div className="bg-[#191521] h-[80px] flex justify-center items-center text-[#6E6E6E] text-[16px] !px-6">
+        <p className="!px-2 ">Copyright  2025 by Vikramaadhithya theme All Right Reserved. </p>
+      </div>
         </div>
       </div>
     </section>

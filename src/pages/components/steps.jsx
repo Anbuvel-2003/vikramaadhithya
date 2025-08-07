@@ -29,15 +29,15 @@ function Step() {
   ];
 
   return (
-    <div className="w-full py-10 !px-0">
+    <div className="w-full !py-10 !px-0">
       <div className="w-full flex flex-col md:flex-row justify-evenly md:space-x-0 space-y-10 md:space-y-0">
         {steps.map((step, index) => (
           <div
             key={index}
-            className="group relative flex flex-col items-start w-full md:w-full flex-1 px-4"
+            className="group relative flex flex-col items-start w-full md:w-full flex-1 px-4 "
           >
             {/* Number Circle */}
-            <div className="relative flex items-center justify-start !mb-6">
+            <div className="relative flex items-center justify-start !mb-6 cursor-pointer">
               <div className="w-16 h-16 rounded-full border-2 border-gray-400 bg-white transition-all duration-300 group-hover:border-blue-600" />
               <span className="absolute left-1/2 transform -translate-x-1/2 text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
                 {step.number}
@@ -45,12 +45,12 @@ function Step() {
             </div>
 
             {/* Title */}
-            <h3 className="text-[18px] font-medium !mb-3 group-hover:text-blue-600 transition-colors duration-300 text-left">
+            <h3 className="text-[18px] font-medium !mb-3 group-hover:text-blue-600 transition-colors duration-300 text-left cursor-pointer">
               {step.title}
             </h3>
 
             {/* Description */}
-            <p className="text-[16px] text-gray-600 group-hover:text-blue-600 transition-colors duration-300 text-left max-w-[300px]">
+            <p className="text-[16px] text-gray-600 group-hover:text-blue-600 transition-colors duration-300 text-left max-w-[300px] cursor-pointer">
               {step.description}
             </p>
 
@@ -61,7 +61,7 @@ function Step() {
 
             {/* Vertical line (mobile only) */}
             {index !== steps.length - 1 && (
-              <div className="md:hidden w-0.5 h-10 !ml-8 bg-gray-300 mt-4" />
+              <div className="md:hidden w-0.5 h-0 !ml-8 bg-gray-300 !mt-4" />
             )}
           </div>
         ))}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Img from "../../img/faq.png";
 import { TbPlus, TbMinus } from "react-icons/tb";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Faq() {
     const Faq = [
@@ -66,8 +67,8 @@ function Faq() {
                                     {/* Title Row */}
                                     <div
                                         className={`flex !p-3 justify-between items-center rounded-t-[5px] cursor-pointer transition-all duration-300 ${isSelected
-                                                ? "bg-gradient-to-r from-[#2C48A2] to-[#4773FF]"
-                                                : "bg-white"
+                                            ? "bg-gradient-to-r from-[#2C48A2] to-[#4773FF]"
+                                            : "bg-white"
                                             }`}
                                         onClick={() => {
                                             setSelected(isSelected ? null : item);
@@ -90,13 +91,26 @@ function Faq() {
                                     </div>
 
                                     {/* Answer */}
-                                    {isSelected && (
-                                        <div className="bg-white rounded-b-[5px] !p-5 border-t border-gray-200">
-                                            <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] text-[12px] text-[#828282] font-nunito">
-                                                {item?.answer}
-                                            </p>
-                                        </div>
-                                    )}
+                                    <AnimatePresence initial={false}>
+                                        {isSelected && (
+                                            <motion.div
+                                                key="faq"
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{ height: "auto", opacity: 1 }}
+                                                exit={{ height: 0, opacity: 0 }}
+                                                transition={{ duration: 0.4, ease: "easeInOut" }}
+                                                className="overflow-hidden bg-white rounded-b-[50px] border-t border-gray-200"
+                                            >
+                                                <div className="!p-5">
+                                                    <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] text-[12px] text-[#828282] font-nunito">
+                                                        {item?.answer}
+                                                    </p>
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+
+
                                 </div>
                             );
                         })}

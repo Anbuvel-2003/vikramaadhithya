@@ -1,7 +1,8 @@
 import React from "react";
-import { BsTelephoneOutbound } from "react-icons/bs";
+import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { MdOutlineEmail } from "react-icons/md";
 import { MdOutlineLocationOn } from "react-icons/md";
+
 import { GrLinkedinOption } from "react-icons/gr";
 import { FaFacebookF, FaInstagram } from "react-icons/fa6";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -65,32 +66,32 @@ function Contactus() {
           {/* Contact Info */}
           <div>
             {/* Email */}
-            <div className="flex !gap-6 lg:!pb-10 md:!pb-5 !pb-5">
-              <div className="flex items-center justify-center rounded-xl bg-[#F7F7F7]">
+            <div className="flex !gap-6 lg:!pb-5 md:!pb-5 !pb-5">
+              <div className="flex items-center justify-center rounded-xl">
                 <MdOutlineEmail size={30} color="#2C48A2" />
               </div>
-              <a href="mailto:connect@gmail" className="text-[#0E1F51] text-sm lg:text-base">
-                connect@gmail.com
+              <a href="mailto:info@aadhithyaa.in" className="text-[#0E1F51] text-sm lg:text-base">
+                info@aadhithyaa.in
               </a>
             </div>
 
             {/* Location */}
-            <div className="flex !gap-6 lg:!pb-10 md:!pb-5 !pb-5">
-              <div className="flex items-center justify-center rounded-xl  bg-[#F7F7F7]">
+            <div className="flex !gap-6 lg:!pb-5 md:!pb-5 !pb-5">
+              <div className="flex items-center justify-center rounded-xl ">
                 <MdOutlineLocationOn size={30} color="#2C48A2" />
               </div>
-              <a href="#" target="_blank" className="text-[#0E1F51] text-sm lg:text-base">
-                20 Island Park Road, New Jearsy, New York, USA
+              <a href="" target="_blank" className="text-[#0E1F51] text-sm lg:text-base">
+                H-22, Peelamedu, HUDCO Colony, <br /> Coimbatore, Tamil Nadu-641004
               </a>
             </div>
 
             {/* Phone */}
             <div className="flex !gap-6 !pb-5">
-              <div className="flex items-center justify-center rounded-xl  bg-[#F7F7F7]">
-                <BsTelephoneOutbound size={30} color="#2C48A2" />
+              <div className="flex items-center justify-center rounded-xl">
+                <MdOutlinePhoneInTalk size={30} color="#2C48A2" />
               </div>
-              <a href="tel:9874563210" className="text-[#0E1F51] text-sm lg:text-base">
-                9874563210
+              <a href="tel:+917418707788" className="text-[#0E1F51] text-sm lg:text-base">
+                +91 74187 07788
               </a>
             </div>
 
@@ -100,21 +101,21 @@ function Contactus() {
                 Follow Us
               </p>
               <div className="flex !gap-5 !pt-5">
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/company/aadhithyaa/" target="_blank" rel="noopener noreferrer">
                   <GrLinkedinOption
                     size={15}
                     color="white"
                     className="bg-[#2C48A2] rounded-lg h-12 w-12 !p-3"
                   />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/vikramaadhithya_pvt.ltd?igsh=MTB5NDllcjVycnJmYQ==" target="_blank" rel="noopener noreferrer">
                   <FaInstagram
                     size={15}
                     color="white"
                     className="bg-[#2C48A2] rounded-lg h-12 w-12 !p-3"
                   />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/share/16kW9eZbo2/" target="_blank" rel="noopener noreferrer">
                   <FaFacebookF
                     size={15}
                     color="white"

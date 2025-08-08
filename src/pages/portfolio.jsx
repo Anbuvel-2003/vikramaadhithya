@@ -59,10 +59,10 @@ function Portfolio() {
 
             <div className="!my-10">
               <div>
-          <h2 className="text-[24px] sm:text-[16px] md:text-[20px] lg:text-[24px] font-medium text-[#2C48A2] text-center !mb-6">
+          <h2 className="text-[24px] sm:text-[16px] md:text-[20px] lg:text-[24px] font-medium text-[#2C48A2] text-center !mb-2">
             Our Works
           </h2>
-          <p className="text-[#0E1F51] text-[20px] sm:text-[26px] md:text-[30px] lg:text-[40px] font-bold text-center !mb-6">
+          <p className="text-[#0E1F51] text-[20px] sm:text-[26px] md:text-[30px] lg:text-[40px] font-bold text-center !mb-2">
              Portfolio
           </p>
           </div>
@@ -74,7 +74,7 @@ function Portfolio() {
                     <img
                       src={item.img}
                       alt="Progress Illustration"
-                      className="max-w-[90%] sm:max-w-[80%] md:max-w-full h-auto"
+                      className="max-w-[90%] sm:max-w-[80%] md:max-w-full h-auto transform transition-transform duration-500 ease-in-out hover:scale-110"
                     />
                     <div className='relative flex flex-col -top-10 w-[80%] place-self-center   !p-5 bg-white shadow-2xl rounded-2xl '>
                       <p className="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[16px] font-medium text-[#0E1F51] text-center">

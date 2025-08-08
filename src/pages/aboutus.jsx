@@ -134,13 +134,13 @@ function Aboutus() {
 
         {/* Progress Details */}
         <div className="w-full lg:w-1/2 md:w-1/2">
-          <h2 className="text-[24px] sm:text-[16px] md:text-[20px] lg:text-[24px] font-medium text-[#0E1F51] !mb-6">
+          <h2 className="text-[24px] sm:text-[16px] md:text-[20px] lg:text-[24px] font-medium text-[#0E1F51] !mb-5">
             About Vikramaadhithya
           </h2>
           <p className="text-[#0E1F51] text-[20px] sm:text-[26px] md:text-[30px] lg:text-[40px] font-bold !mb-6">
             Empowering Innovation Through Technology
           </p>
-          <p>
+          <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#696969] text-manrope">
             At Vikramaadhithya, we specialize in providing expert IT and business consulting tailored to your goals.
             With a deep understanding of modern technology and market trends, our team helps you solve challenges,
             optimize performance, and drive growth — efficiently and effectively.
@@ -180,7 +180,7 @@ function Aboutus() {
 
         {/* what we do */}
 
-      <div className='!mt-20 !mb-10'>
+      <div className='!mt-20 !mb-1'>
         <p className="text-[#104CBA] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-manrope text-center font-semibold leading-8 sm:leading-10">
           What We Do
         </p>
@@ -188,7 +188,7 @@ function Aboutus() {
           Providing the best solutions in the Industry
         </p>
         {/* Services Grid */}
-        <div className="!mb-50" >
+        <div className="lg:!mb-30 md:!mb-40 !mb-25" >
           <div div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 !gap-30 !px-6 lg:!px-15 justify-center place-self-center" >
             {
               things.map((thing) => (
@@ -197,7 +197,7 @@ function Aboutus() {
                   <img
                     src={thing.img}
                     alt="service"
-                    className="rounded-2xl w-fit h-auto transition-transform duration-300 group-hover:translate-y-6 group-hover:brightness-50"
+                    className="rounded-2xl w-fit h-auto  group-hover:brightness-50"
                   />
                   <div className=' top-0 left-0 lg:!pb-20'>
 
@@ -211,7 +211,7 @@ function Aboutus() {
                       <h3 className="text-[#0E1F51] text-xl font-semibold !mb-2">
                         {thing.title}
                       </h3>
-                      <p className="text-[#696969] text-md leading-relaxed">
+                      <p className="text-[#696969] text-md leading-relaxed lg:!h-25 ">
                         {thing.desc}
                       </p>
                     </div>
@@ -227,17 +227,17 @@ function Aboutus() {
 
       {/* our team */}
 
-      <div className="lg:!mx-30 md:!mx-20 !mx-10">
+      <div className="lg:!mx-30 md:!mx-20 !mx-10 lg:!mb-20 md:!mb-15 !mb-10">
         <p className="text-[#104CBA] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-manrope text-center font-semibold leading-8 sm:leading-10">
           Team Members
         </p>
-        <p className="text-[20px] sm:text-[24px] md:text-[30px] lg:text-[40px] font-bold font-manrope text-center text-[#0E1F51] !mb-8 sm:!mb-12 md:!mb-16">
+        <p className="text-[20px] sm:text-[24px] md:text-[30px] lg:text-[40px] font-bold font-manrope text-center text-[#0E1F51] !mb-2 sm:!mb-12 md:!mb-16">
           Our Proficient Team
         </p>
           <div className="grid lg:grid-cols-3 grid-cols-1 items-center justify-center">
         {
           team.map((person) => (
-            <div key={person.id} className="grid lg:grid-cols-3 grid-cols-1 !gap-10 lg:w-[80vw] w-full !mt-10 justify-between">
+            <div key={person.id} className="grid lg:grid-cols-3 grid-cols-1 !gap-10 lg:w-[80vw] w-full  justify-between">
               <div
                 className="cursor-pointer  w-full h-[100%]  "
                
@@ -246,7 +246,7 @@ function Aboutus() {
                   <img
                     src={person.img}
                     alt=""
-                    className="w-full h-full object-contain "
+                    className="w-full h-full object-contain transform transition-transform duration-300 hover:scale-105"
                   />
                 </div>
                 <div className="!px-10">

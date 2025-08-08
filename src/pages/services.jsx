@@ -105,7 +105,7 @@ function Services() {
         <p className="text-[#104CBA] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-manrope text-center font-semibold leading-8 sm:leading-10">
           Services
         </p>
-        <p className="text-[20px] sm:text-[24px] md:text-[30px] lg:text-[40px] font-bold font-manrope text-center text-[#0E1F51] !mb-8 sm:!mb-12 md:!mb-16">
+        <p className="text-[20px] sm:text-[24px] md:text-[30px] lg:text-[40px] font-bold font-manrope text-center text-[#0E1F51] ">
           Our Expertise
         </p>
 
@@ -156,13 +156,13 @@ function Services() {
 
 
       {/* Progress Bar */}
-      <div className="!m-10 md:!m-12 lg:!m-15">
+      <div className="!mx-10 md:!mx-12 lg:!mx-15">
         <Progress />
       </div>
 
       {/* Impressions */}
 
-      <div className="!my-15 !pb-15">
+      <div className="!my-10 ">
         {/* Background image */}
         <img
           src={img13}
@@ -182,18 +182,14 @@ function Services() {
           {/* Button */}
           <div className="flex justify-center">
             <div
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/Contactus")}
               className="group flex justify-center items-center rounded-xl bg-[#2C48A2] text-white
-                   lg:h-15 lg:w-70 h-10 md:h-12 md:w-40 w-40 cursor-pointer transition-colors duration-300
+                   lg:h-15 lg:w-40 h-10 md:h-12 md:w-40 w-40 cursor-pointer transition-colors duration-300
                    hover:bg-white hover:text-[#2C48A2] !gap-2"
             >
               <span className="lg:text-[22px] font-semibold md:text-[16px] text-[14px] transition-colors duration-300">
                 Contact us
               </span>
-              <IoArrowForwardOutline
-                size={30}
-                className="transition-colors duration-300 group-hover:text-[#3D63EA] !pt-1"
-              />
             </div>
           </div>
         </div>
@@ -202,7 +198,7 @@ function Services() {
 
       {/* get in touch */}
 
-      <div className="!px-10 lg:!px-15 !py-10">
+      <div className="!px-10 lg:!px-15 !pb-10">
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 lg:!gap-12">
 
           {/* Left - Image */}
@@ -212,13 +208,13 @@ function Services() {
 
           {/* Right - Form */}
           <div className="w-full md:w-1/2 relative">
-            <h2 className="lg:text-[20px] md:text-[18px] text-[16px] font-semibold text-[#0E1F51] !mb-5">
+            <h2 className="lg:text-[20px] md:text-[18px] text-[16px] font-semibold text-[#0E1F51] !mb-2">
               Get in Touch
             </h2>
             <p className="lg:text-[40px] md:text-[30px] text-[20px] font-bold font-manrope text-[#0E1F51]">
               Send us a message
             </p>
-            <p className="lg:text-[20px] md:text-[18px] text-[16px] font-medium text-[#696969] !pt-6">
+            <p className="lg:text-[20px] md:text-[18px] text-[16px] font-medium text-[#696969] !pt-4">
               We’d love to hear from you! Whether you need expert advice, or want to start a project — our team is ready to help.
             </p>
 

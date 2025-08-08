@@ -29,35 +29,36 @@ function Step() {
   ];
 
   return (
-    <div className="w-full !py-10 !px-0">
-      <div className="w-full flex flex-col md:flex-row justify-evenly md:space-x-0 space-y-10 md:space-y-0">
+    <div className="w-full !py-10 !px-0  flex items-center justify-center">
+      <div className="w-full flex flex-col md:flex-row  md:space-x-0 space-y-10 md:space-y-0">
         {steps.map((step, index) => (
           <div
             key={index}
-            className="group relative flex flex-col items-start w-full md:w-full flex-1 px-4 "
+            className="group relative flex flex-col items-center w-full md:w-full flex-1 px-4 "
           >
             {/* Number Circle */}
             <div className="relative flex items-center justify-start !mb-6 cursor-pointer">
-              <div className="w-16 h-16 rounded-full border-2 border-gray-400 bg-white transition-all duration-300 group-hover:border-blue-600" />
-              <span className="absolute left-1/2 transform -translate-x-1/2 text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+              <div className="w-16 h-16 rounded-full border-2 border-gray-400 bg-white transition-all duration-300 group-hover:bg-blue-500 group-hover:border-none " />
+              <span className="absolute left-1/2 transform -translate-x-1/2 text-2xl font-bold text-gray-800  transition-colors group-hover:text-white duration-300">
                 {step.number}
               </span>
             </div>
 
             {/* Title */}
-            <h3 className="text-[18px] font-medium !mb-3 group-hover:text-blue-600 transition-colors duration-300 text-left cursor-pointer">
+            <h3 className="text-[18px] font-medium !mb-3 group-hover:text-blue-400 transition-colors duration-300 text-left cursor-pointer">
               {step.title}
             </h3>
 
             {/* Description */}
-            <p className="text-[16px] text-gray-600 group-hover:text-blue-600 transition-colors duration-300 text-left max-w-[300px] cursor-pointer">
+            <p className="text-[16px] text-gray-600 transition-colors duration-300 text-center max-w-[300px] cursor-pointer">
               {step.description}
             </p>
 
             {/* Horizontal line (desktop only) */}
-            {index !== steps.length - 1 && (
-              <div className="hidden md:block absolute top-8  w-full h-0.5 bg-gray-300 z-[-1]" />
-            )}
+           {index !== steps.length - 1 && (
+  <div className="hidden md:block absolute  top-7 left-ful lg:!ml-100 md:!ml-60 w-full h-0.5 bg-gray-300 z-[-1]" />
+)}
+
 
             {/* Vertical line (mobile only) */}
             {index !== steps.length - 1 && (

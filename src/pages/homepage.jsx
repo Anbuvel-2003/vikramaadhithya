@@ -9,6 +9,7 @@ import icon3 from "../img/icon3.png";
 import icon4 from "../img/icon4.png";
 import Step from "./components/steps";
 import Faq from "./components/faq";
+import { useNavigate } from "react-router-dom";
 
 const items = [
   {
@@ -60,9 +61,12 @@ const testing = [
   },
 ];
 
+
+
 function homePage() {
+  const navigate = useNavigate();
   return (
-    <div className=" ">
+    <div className="  ">
       <section>
         <div>
           <div className=" flex  lg:flex-row md:flex-row flex-col bg-[#F6F8FC] lg:!pt-30 !pt-20  ">
@@ -85,7 +89,7 @@ function homePage() {
               <div className="!pb-20">
                 <button
                   type="button"
-                
+                  onClick={() => navigate("/Contactus")}
                   className="border-2 border-none rounded-xl  text-white font-semibold bg-[#3D63EA] lg:h-15 
                 lg:w-50 h-10 w-35 lg:text-[19px]  md:text-[16px] text-[14px] cursor-pointer "
                 >
@@ -111,13 +115,13 @@ function homePage() {
         <div className="bg-white  ">
           <div className='flex lg:flex-row flex-col lg:!pt-30 !pt-10 lg:!px-15 md:!px-10 !px-10 '>
             <div className='flex flex-col lg:w-1/2 md:w-full w-full justify-center '>
-              <div className=' '>
+              <div className='!pb-2 '>
                 <p className='text-[#104CBA] lg:text-[24px] md:text-[20px] text-[16px] font-manrope font-semibold lg:leading-10 md:leading-10 leading-10'>
                   Who we are
                 </p>
               </div>
               <div className='!pb-10'>
-                <p className='lg:text-[40px] md:text-[30px] text-[20px] font-bold font-manrope lg:leading-18 md:leading-10 leading-8 text-[#0E1F51]'>
+                <p className='lg:text-[40px] md:text-[30px] text-[20px] font-bold font-manrope lg:leading-18 md:leading-10 leading-8 text-[#0E1F51] !pb-2 '>
                   We Deliver Smarter Digital Solutions
                 </p>
                 <p className='lg:text-[20px] md:text-[18px] text-[16px]  text-[#696969] font-manrope lg:leading-10 md:leading-10 leading-7 text-justify'>
@@ -161,12 +165,12 @@ function homePage() {
             </div>
             <div className="flex flex-col lg:w-1/2 md:w-full w-full justify-center lg:!px-15 md:!px-10  ">
               <div className=" ">
-                <p className="text-[#104CBA] lg:text-[24px] md:text-[20px] text-[16px] font-manrope font-semibold lg:leading-10 md:leading-10 leading-5 lg:pt-0 md:pt-0 !py-5">
+                <p className="text-[#104CBA] lg:text-[24px] md:text-[20px] text-[16px] font-manrope font-semibold lg:leading-10 md:leading-10 leading-5 lg:pt-0 md:pt-0 !py-2">
                   What we do
                 </p>
               </div>
               <div className="!pb-10">
-                <p className="lg:text-[40px] md:text-[30px] text-[20px] font-bold font-manrope lg:leading-18 md:leading-10 leading-5 lg:pb-0 md:pb-0 !pb-5 text-[#0E1F51]">
+                <p className="lg:text-[40px] md:text-[30px] text-[20px] font-bold font-manrope lg:leading-14 md:leading-10 leading-5 lg:!pb-2 md:pb-0 !pb-2 text-[#0E1F51]">
                   We Develop Products That People Love to Use.
                 </p>
                 <p className="lg:text-[20px] md:text-[18px] text-[16px]  text-[#696969] font-manrope lg:leading-10 md:leading-10 leading-8 text-justify">
@@ -210,18 +214,18 @@ function homePage() {
       {/* how we work */}
 
       <section>
-        <div className="flex flex-col w-full justify-center !py-10 !px-10">
+        <div className="flex flex-col w-full justify-center !py-10 lg:!px-15 md:!px-10 !px-10">
           <div className=" ">
-            <p className="text-[#104CBA] lg:text-[24px] md:text-[20px] text-[16px] font-manrope text-center font-semibold lg:leading-10 md:leading-10 leading-10">
+            <p className="text-[#104CBA] lg:text-[24px] md:text-[20px] text-[16px] font-manrope text-center font-semibold lg:leading-10 md:leading-10 leading-10 !pb-2">
               How we work
             </p>
           </div>
-          <div className="lg:!pb-16 md:!pb-4 ">
+          <div className="lg:!pb-2 md:!pb-4 ">
             <p className="lg:text-[40px] md:text-[30px] text-[20px] font-bold font-manrope text-center lg:leading-18 md:leading-10 leading-8 text-[#0E1F51]">
               How Vikramaadhithya assist your business
             </p>
           </div>
-          <div className="lg:!pl-20">
+          <div className=" ">
             <Step />
           </div>
         </div>

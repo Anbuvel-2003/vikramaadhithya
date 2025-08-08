@@ -1,30 +1,59 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from "react";
 import img13 from "../../img/Container.png";
 
+const Services = () => {
+  const [animated, setAnimated] = useState(false);
+  const sectionRef = useRef(null);
 
+  const progressBar = [
+    {
+      name: "Business Transformation",
+      value: 90,
+      color: "bg-[#4B164C]",
+    },
+    {
+      name: "Smart Communication Systems",
+      value: 80,
+      color: "bg-[#0A3D62]",
+    },
+    {
+      name: "Intelligent Contact Centers",
+      value: 70,
+      color: "bg-[#4C1D95]",
+    },
+    {
+      name: "Managed Network Solutions",
+      value: 50,
+      color: "bg-[#00B4D8]"
+    },
+  ];
 
-const progressBar = [
-  {
-    name: "Business Transformation",
-    value: 90, color: "bg-[#4B164C]"
-  },
-  {
-    name: "Smart Communication Systems",
-    value: 80, color: "bg-[#0A3D62]"
-  },
-  {
-    name: "Intelligent Contact Centers",
-    value: 70, color: "bg-[#4C1D95]"
-  },
-  {
-    name: "Managed Network Solutions",
-    value: 50, color: "bg-[#00B4D8]"
-  },
-];
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setAnimated(true);
+          observer.disconnect(); // animate only once
+        }
+      },
+      { threshold: 0.3 } // trigger when 30% visible
+    );
 
-function Progress() {
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
+
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center !gap-6 lg:!gap-12">
+    <div
+      ref={sectionRef}
+      className="flex flex-col lg:flex-row items-center justify-center !gap-6 lg:!gap-12"
+    >
       {/* Image */}
       <div className="flex justify-center items-center w-full lg:w-1/2">
         <img
@@ -56,8 +85,8 @@ function Progress() {
               {/* Progress Bar */}
               <div className="w-full h-[4px] bg-gray-200 rounded-full overflow-hidden">
                 <div
-                  className={`h-[4px] rounded-full ${service.color}`}
-                  style={{ width: `${service.value}%` }}
+                  className={`h-[4px] rounded-full transition-all duration-1000 ease-in-out ${service.color}`}
+                  style={{ width: animated ? `${service.value}%` : "0%" }}
                 ></div>
               </div>
             </div>
@@ -66,7 +95,6 @@ function Progress() {
       </div>
     </div>
   );
-}
+};
 
-
-export default Progress;
+export default Services;

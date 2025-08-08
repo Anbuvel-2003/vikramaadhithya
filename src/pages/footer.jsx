@@ -40,13 +40,13 @@ function Footer() {
                 Driven by innovation. Built for the future.
               </p>
               <div className="flex gap-5">
-                <a href="/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/share/16kW9eZbo2/" target="_blank" rel="noopener noreferrer">
                   <FaFacebookF size={24} className="sm:!size-[28px]" />
                 </a>
-                <a href="/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/vikramaadhithya_pvt.ltd?igsh=MTB5NDllcjVycnJmYQ==" target="_blank">
                   <FaInstagram size={24} className="sm:!size-[28px]" />
                 </a>
-                <a href="/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/company/aadhithyaa/" target="_blank" rel="noopener noreferrer">
                   <TbBrandLinkedin size={24} className="sm:!size-[28px]" />
                 </a>
               </div>

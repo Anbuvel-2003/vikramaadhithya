@@ -26,8 +26,8 @@ const DropdownMenu = ({ items, isOpen, isHorizontal = false }) => {
                         <div
                             key={idx}
                             className={`relative ${isHorizontal
-                                    ? "flex flex-col items-start w-1/2"
-                                    : "flex flex-wrap"
+                                ? "flex flex-col items-start w-1/2"
+                                : "flex flex-wrap"
                                 }`}
                         >
                             <div className="bg-transparent !px-2 !py-2  rounded-lg  transition-all duration-300 group ">
@@ -105,31 +105,16 @@ const DropdownMenu = ({ items, isOpen, isHorizontal = false }) => {
                                         <a
                                             href={item.path}
                                             className={`${isHorizontal
-                                                    ? "px-4 whitespace-nowrap"
-                                                    : "block px-6 !py-3 mb-2"
+                                                ? "px-4 whitespace-nowrap"
+                                                : "block px-6 !py-3 mb-2"
                                                 } uppercase text-sm font-syne tracking-wide text-black group-hover:text-transparent group-hover:bg-[#9F70FD] group-hover:bg-clip-text duration-200 text-center`}
                                         >
                                             {item.title}
                                         </a>
-                                        {/* <p className="text-[12px] text-black font-syne">
-                      {item?.description}
-                    </p> */}
+
                                     </div>
                                 </div>
                             </div>
-                            {/* {item.subItems && (
-                <div className="mt-6 flex flex-col items-center bg-transparent backdrop-blur-sm rounded-md !py-4">
-                  {item.subItems.map((subItem, subIdx) => (
-                    <a
-                      key={subIdx}
-                      href={subItem.path}
-                      className="block px-6 !py-2 mb-2 text-sm text-black hover:text-transparent hover:bg-gradient-to-r hover:from-indigo-500 hover:to-cyan-400 hover:bg-clip-text transition-colors duration-200 uppercase font-medium tracking-wide text-center"
-                    >
-                      {subItem.title}
-                    </a>
-                  ))}
-                </div>
-              )} */}
                         </div>
                     );
                 })}
@@ -141,6 +126,8 @@ const DropdownMenu = ({ items, isOpen, isHorizontal = false }) => {
 const NavBar = () => {
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    const [isScrolled, setIsScrolled] = useState(false);
+
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
     const dropdownRef = useRef(null);
@@ -149,6 +136,7 @@ const NavBar = () => {
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
+            setIsScrolled(currentScrollY > 50);
             if (currentScrollY > lastScrollY && currentScrollY > 100) {
                 setIsVisible(false);
             } else {
@@ -173,15 +161,11 @@ const NavBar = () => {
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
-    // Toggle dropdown menu
+
+
+
     const toggleDropdown = (index) => {
-        // setActiveDropdown(activeDropdown == index ? null : index);
-        console.log("checkingggg", activeDropdown);
-        if (activeDropdown) {
-            setActiveDropdown(null);
-        } else {
-            setActiveDropdown(index);
-        }
+        setActiveDropdown(activeDropdown === index ? null : index);
     };
 
     // Handle escape key to close dropdown
@@ -205,84 +189,37 @@ const NavBar = () => {
         {
             title: "Services",
             path: "/services",
-            // dropdown: [
-            //     {
-            //         id: 1,
-            //         title: "Custom Software Development",
-            //         path: "/softwareSection",
-            //         description:
-            //             "Get end-to-end bespoke solutions for your business needs",
-            //     },
-            //     {
-            //         id: 2,
-            //         title: "Saas app development",
-            //         path: "/saasproductSection",
-            //         description: "Build reliable Software-as-a-service applications",
-            //     },
-            //     {
-            //         id: 3,
-            //         title: "Mobile app development",
-            //         path: "/mobileappSection",
-            //         description:
-            //             "Build ios and Android apps using native and cross platform",
-            //     },
-            //     {
-            //         id: 4,
-            //         title: "Web app development",
-            //         path: "/webappSection",
-            //         description: "Develope web apps with frontend, backend or full-stack",
-            //     },
-            //     {
-            //         id: 5,
-            //         title: "E-Commerce app development",
-            //         path: "/ecommerceSection",
-            //         description: "Driving online sales with powerful eCommerce solution",
-            //     },
-            //     {
-            //         id: 6,
-            //         title: "UI and UX Design",
-            //         path: "/uxuiSection",
-            //         description:
-            //             "Design intuitive and visually appealing user interfaces",
-            //     },
-            //     {
-            //         id: 7,
-            //         title: "Testing Services",
-            //         path: "testingSection",
-            //         description:
-            //             "Ensuring seamless user experience across all devices and platforms",
-            //     },
-            // ],
-            // isHorizontal: true,
         },
-        // {
-        //     title: "Products",
-        //     path: "/ProductSection"
-        // },
         {
             title: "Portfolio",
             path: "/portfolio",
         },
-        // { title: "Blog", path: "/blogsection" },
-        { title: "About Us", path: "/aboutUs" },
-        // { title: "Careers", path: "/Careerssection" },
-        { title: "Contact Us", path: "/contactUs" },
+        {
+            title: "About Us",
+            path: "/aboutUs"
+        },
+        {
+            title: "Contact Us",
+            path: "/contactUs"
+        },
     ];
 
     return (
         <nav
-            className={`fixed top-0 w-full z-50 transition-all duration-300 bg-transparent ${isVisible ? "translate-y-0" : "-translate-y-full"
-                }`}
+            className={`fixed top-0 w-full z-50 transition-all duration-300 
+                ${isScrolled ? "bg-white text-black shadow-md" : "bg-transparent text-white"}
+                ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
         >
             <div className="  px-4">
                 <div className="flex  lg:justify-start justify-between w-[95vw]  items-center h-16">
                     {/* Logo - moved significantly to the right */}
                     <div className="flex-shrink-0 ml-32 lg:!pl-15 hidden lg:block cursor-pointer ">
-                        <img
+                        <a href="/"><img
                             src={Logo}
                             alt={`client-`}
                             className="w-fit h-[40px]"
                         />
+                        </a>
                     </div>
                     <div className="flex-shrink-0 ml-32 md:!pt-5 !pt-3  !pl-10 lg:hidden block ">
                         <img
@@ -308,7 +245,7 @@ const NavBar = () => {
                             >
                                 <a
                                     href={link.path}
-                                    className="relative group flex items-center uppercase text-md font-manrope text-black 
+                                    className="relative group flex items-center  text-lg font-manrope text-black 
                                      hover:text-[#2C48A2] hover:bg-clip-text transition-all duration-700 ease-in-out"
                                     style={{ letterSpacing: "0.10em" }}
                                 >
@@ -400,10 +337,10 @@ const NavBar = () => {
                                 {link.dropdown && (
                                     <div
                                         className={`pl-4 overflow-hidden transition-all duration-300 ease-in-out ${activeDropdown === index
-                                                ? "max-h-64 opacity-100"
-                                                : activeDropdown == null
-                                                    ? "max-h-0 opacity-0 bg-red-900"
-                                                    : "max-h-0 opacity-0"
+                                            ? "max-h-64 opacity-100"
+                                            : activeDropdown == null
+                                                ? "max-h-0 opacity-0 bg-red-900"
+                                                : "max-h-0 opacity-0"
                                             }`}
                                     >
                                         {link.dropdown.map((item, idx) => (

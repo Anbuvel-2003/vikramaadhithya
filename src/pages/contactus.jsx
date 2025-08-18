@@ -24,7 +24,7 @@ const ContactSchema = Yup.object().shape({
 
 function Contactus() {
   return (
-    <section className=" !my-15">
+    <section className=" !my-16">
 
       {/* Header Section with Background */}
       <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] flex flex-col items-center justify-center">
@@ -50,10 +50,10 @@ function Contactus() {
       </div>
 
       {/* Content Grid */}
-      <div className="grid lg:grid-cols-2  gap-10 !px-10 lg:!px-20 ">
+      <div className="grid lg:grid-cols-2  gap-10 !px-10 lg:!px-15 ">
         <div>
           <div>
-            <p className="lg:text-[58px] md:text-[30px] text-[20px] font-bold font-manrope text-[#0E1F51] ">
+            <p className="lg:text-[58px] md:text-[30px] text-[20px] font-bold font-manrope  text-[#0E1F51] ">
               Contact Us
             </p>
             <p className="lg:text-[20px] md:text-[18px] text-[16px] font-manrope lg:w-3/4 md:w-3/4 w-full !pb-5 text-[#696969] ">
@@ -70,7 +70,7 @@ function Contactus() {
               <div className="flex items-center justify-center rounded-xl">
                 <MdOutlineEmail size={30} color="#2C48A2" />
               </div>
-              <a href="mailto:info@aadhithyaa.in" className="text-[#0E1F51] text-sm lg:text-base">
+              <a href="mailto:info@aadhithyaa.in" className="text-black text-sm lg:text-base ">
                 info@aadhithyaa.in
               </a>
             </div>
@@ -80,7 +80,7 @@ function Contactus() {
               <div className="flex items-center justify-center rounded-xl ">
                 <MdOutlineLocationOn size={30} color="#2C48A2" />
               </div>
-              <a href="" target="_blank" className="text-[#0E1F51] text-sm lg:text-base">
+              <a href="" target="_blank" className="text-black text-sm lg:text-base ">
                 H-22, Peelamedu, HUDCO Colony, <br /> Coimbatore, Tamil Nadu-641004
               </a>
             </div>
@@ -90,7 +90,7 @@ function Contactus() {
               <div className="flex items-center justify-center rounded-xl">
                 <MdOutlinePhoneInTalk size={30} color="#2C48A2" />
               </div>
-              <a href="tel:+917418707788" className="text-[#0E1F51] text-sm lg:text-base">
+              <a href="tel:+917418707788" className="text-black text-sm lg:text-base ">
                 +91 74187 07788
               </a>
             </div>
@@ -239,9 +239,9 @@ function Contactus() {
                                   lg:h-15 lg:w-50 h-10 md:h-12 md:w-40 w-40 cursor-pointer transition-colors duration-300
                                   hover:bg-white hover:text-[#2C48A2] hover:border-2 hover:border-[#2C48A2] !gap-2"
                 >
-                  <span className="lg:text-[22px] font-semibold md:text-[16px] text-[14px] transition-colors duration-300">
-                    Contact us
-                  </span>
+                  <button className="lg:text-[22px] font-semibold md:text-[16px] text-[14px] transition-colors duration-300">
+                    Send Message
+                  </button>
 
                 </div>
 

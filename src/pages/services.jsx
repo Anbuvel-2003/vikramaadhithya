@@ -15,7 +15,6 @@ import img12 from "../img/W-services6.png";
 import img13 from "../img/services01.png";
 import img14 from "../img/touch.png";
 import Progress from "./components/progress";
-import { IoArrowForwardOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { Formik, Field, ErrorMessage, Form as FormikForm } from "formik";
 import * as Yup from "yup";
@@ -85,7 +84,7 @@ function Services() {
   const navigate = useNavigate();
 
   return (
-    <div className="!mt-15">
+    <div className="!mt-16">
       {/* Header Section with Background */}
       <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] flex flex-col items-center justify-center">
         <img
@@ -102,10 +101,10 @@ function Services() {
       {/* Services Content */}
       <div className="w-full !px-5 sm:!px-8 md:!px-12 lg:!px-15 !py-10 sm:!py-12 md:!py-15">
         {/* Section Title */}
-        <p className="text-[#104CBA] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-manrope text-center font-semibold leading-8 sm:leading-10">
+        <p className="text-[#104CBA] text-[18px] md:text-[20px] lg:text-[24px] font-manrope text-center font-semibold leading-8 sm:leading-10">
           Services
         </p>
-        <p className="text-[20px] sm:text-[24px] md:text-[30px] lg:text-[40px] font-bold font-manrope text-center text-[#0E1F51] ">
+        <p className="text-[24px] md:text-[30px] lg:text-[40px] font-bold font-manrope text-center text-[#0E1F51] ">
           Our Expertise
         </p>
 
@@ -137,13 +136,13 @@ function Services() {
                   />
                 </div>
                 <h3
-                  className={`text-[18px] sm:text-[20px] lg:text-[24px] font-bold !my-3 sm:!my-4
+                  className={`text-[19px] lg:text-[24px] font-bold !my-3 sm:!my-4
               ${isHovered ? "text-white" : "text-[#212121]"}`}
                 >
                   {service.title}
                 </h3>
                 <p
-                  className={`text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-center
+                  className={`text-[16px] md:text-[18px] lg:text-[20px] text-center
               ${isHovered ? "text-white" : "text-[#696969]"}`}
                 >
                   {service.desc}
@@ -208,7 +207,7 @@ function Services() {
 
           {/* Right - Form */}
           <div className="w-full md:w-1/2 relative">
-            <h2 className="lg:text-[20px] md:text-[18px] text-[16px] font-semibold text-[#0E1F51] !mb-2">
+            <h2 className="lg:text-[20px] md:text-[18px] text-[16px] font-semibold text-[#104CBA] !mb-2">
               Get in Touch
             </h2>
             <p className="lg:text-[40px] md:text-[30px] text-[20px] font-bold font-manrope text-[#0E1F51]">
@@ -302,14 +301,14 @@ function Services() {
 
                     {/* Submit Button */}
                     <div
-                      onClick={() => navigate("/")}
+                      // onClick={() => navigate("/")}
                       className="group flex justify-center items-center rounded-xl bg-[#2C48A2] text-white
                    lg:h-15 lg:w-50 h-10 md:h-12 md:w-40 w-40 cursor-pointer transition-colors duration-300
                    hover:bg-white hover:text-[#2C48A2] hover:border-2 hover:border-[#2C48A2] !gap-2"
                     >
-                      <span className="lg:text-[22px] font-semibold md:text-[16px] text-[14px] transition-colors duration-300">
+                      <button className="lg:text-[22px] font-semibold md:text-[16px] text-[14px] transition-colors duration-300">
                          Send Message
-                      </span>
+                      </button>
 
                     </div>
                   </FormikForm>

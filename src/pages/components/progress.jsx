@@ -65,7 +65,7 @@ const Services = () => {
 
       {/* Progress Details */}
       <div className="w-full lg:w-1/2">
-        <h2 className="text-[20px] sm:text-[26px] md:text-[30px] lg:text-[40px] font-bold text-[#0E1F51] !mb-6">
+        <h2 className="text-[20px] sm:text-[26px] md:text-[30px] lg:text-[40px] font-bold text-[#2E325B] !mb-6">
           Fast & Secure Services
         </h2>
 

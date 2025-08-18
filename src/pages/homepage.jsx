@@ -279,7 +279,7 @@ function homePage() {
                           <h2 className="text-[#2E325B] lg:text-[24px] md:text-[22px] text-[20px] capitalize font-bold font-syne  ">
                             {item?.q1}
                           </h2>
-                          <h2 className="text-[#696969] lg:text-[18px] md:text-[14px] text-[16px] font-manrope !my-2 leading-8">
+                          <h2 className="text-[#696969] lg:text-[16px] md:text-[14px] text-[14px] font-manrope !my-2 leading-8">
                             {item?.q2}
                           </h2>
                         </div>

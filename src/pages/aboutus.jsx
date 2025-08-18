@@ -108,7 +108,7 @@ const team = [
 
 function Aboutus() {
   return (
-    <div className="!mt-15 ">
+    <div className="!mt-16 ">
      {/* Header Section with Background */}
            <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] flex flex-col items-center justify-center">
              <img
@@ -134,13 +134,13 @@ function Aboutus() {
 
         {/* Progress Details */}
         <div className="w-full lg:w-1/2 md:w-1/2">
-          <h2 className="text-[24px] sm:text-[16px] md:text-[20px] lg:text-[24px] font-medium text-[#0E1F51] !mb-5">
+          <h2 className="text-[24px] sm:text-[16px] md:text-[20px] lg:text-[24px] font-bold text-[#104CBA] ">
             About Vikramaadhithya
           </h2>
           <p className="text-[#0E1F51] text-[20px] sm:text-[26px] md:text-[30px] lg:text-[40px] font-bold !mb-6">
             Empowering Innovation Through Technology
           </p>
-          <p className="lg:text-[18px] md:text-[16px] text-[14px] text-[#696969] text-manrope">
+          <p className="lg:text-[20px] md:text-[18px] text-[16px] text-[#696969] text-manrope font-medium text-justify">
             At Vikramaadhithya, we specialize in providing expert IT and business consulting tailored to your goals.
             With a deep understanding of modern technology and market trends, our team helps you solve challenges,
             optimize performance, and drive growth — efficiently and effectively.
@@ -155,7 +155,7 @@ function Aboutus() {
               </div>
 
               <div className='w-3/4 !pb-5'>
-                <p className='lg:text-[22px] md:text-[18px] text-[16px] font-bold text-manrope'>Solution Focused</p>
+                <p className='lg:text-[22px] md:text-[18px] text-[16px] font-extrabold text-manrope'>Solution Focused</p>
                 <p className='lg:text-[18px] md:text-[16px] text-[14px] text-[#696969] text-manrope'>We don’t just consult — we collaborate to design real-world, results-driven solutions tailored to your business.</p>
               </div>
             </div>
@@ -166,8 +166,8 @@ function Aboutus() {
                   size={25}
                 />
               </div>
-              <div className='w-3/4'>
-                <p className='lg:text-[22px] md:text-[18px] text-[16px] font-bold text-manrope'>99.99% Success</p>
+              <div className='w-3/5'>
+                <p className='lg:text-[22px] md:text-[18px] text-[16px] font-extrabold text-manrope'>99.99% Success</p>
                 <p className='lg:text-[18px] md:text-[16px] text-[14px] text-[#696969] text-marope'>
                   Our proven methodology and client-centric approach ensure near-perfect delivery and long-term satisfaction.
                 </p>
@@ -208,7 +208,7 @@ function Aboutus() {
 
                     {/* White Card */}
                     <div className="absolute top-30 lg:right-0  right-0 transform lg:translate-y-1/2  bg-white rounded-2xl shadow-2xl !px-5 !py-6 w-full max-w-[300px] transition-transform duration-300 group-hover:translate-y-6">
-                      <h3 className="text-[#0E1F51] text-xl font-semibold !mb-2">
+                      <h3 className="text-[#0E1F51] text-xl font-semibold !mb-2 hover:text-red-400">
                         {thing.title}
                       </h3>
                       <p className="text-[#696969] text-md leading-relaxed lg:!h-25 ">
@@ -265,11 +265,9 @@ function Aboutus() {
 
 </div>
 
-
-
-
-
-
+<a href='/Sample' className="text-[#104CBA] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-manrope text-center font-semibold leading-8 sm:leading-10">
+          Our Clients
+        </a>
 
     </div >
   )

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "@fontsource/manrope"; 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./pages/homepage";
 import Contactus from "./pages/contactus";
@@ -14,6 +15,10 @@ import Faq from "./pages/components/faq";
 import Progress from "./pages/components/progress";
 import Terms from "./pages/terms";
 import Privacy from "./pages/privacy";
+
+
+
+
 function Layout() {
   return (
     <>

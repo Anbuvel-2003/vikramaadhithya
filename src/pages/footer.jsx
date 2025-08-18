@@ -27,11 +27,12 @@ function Footer() {
         />
 
         {/* Content */}
-        <div className="relative z-10 !px-10 sm:!px-10 lg:!px-20 !py-12 lg:!pt-20">
+        <div className="relative z-10 !px-10 sm:!px-10 lg:!px-15 !py-12 lg:!pt-20">
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-20">
             {/* Logo + About */}
             <div className="lg:w-1/2">
-              <img src={logo} alt="logo" className="w-[180px] sm:w-[200px] !mb-6" />
+            <a href="/">
+              <img src={logo} alt="logo" className="w-[180px] sm:w-[200px] !mb-6" /></a>
               <p className="text-gray-300 lg:w-[75%] leading-8 sm:leading-10 text-justify !mb-6">
                 Crafting digital solutions that power growth. We specialize in
                 full-stack development, tailored software, and user-centric
